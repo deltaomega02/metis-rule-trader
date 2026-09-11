@@ -1,0 +1,17 @@
+[Unit]
+Description=METIS v6 monochrome dashboard (bare http.server :8501)
+After=network-online.target
+
+[Service]
+Type=simple
+User=YOUR_SERVICE_USER
+WorkingDirectory=/opt/metis-rule-trader
+EnvironmentFile=/opt/metis-rule-trader/.env
+ExecStart=/opt/metis-rule-trader/venv/bin/python3 -u observability/dashboard.py
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
