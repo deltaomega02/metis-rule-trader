@@ -1,0 +1,28 @@
+# 비밀값 (.env, paper.env 등)
+.env
+*.env
+
+# 엔진 산출물: state*.db, market*.json, 로그
+/data/
+logs/
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+*.sqlite*
+
+# 리서치 데이터·결과
+research/data/
+research/data_realistic/
+research/sweep_out/
+
+# Python
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+
+# OS / 에디터
+.DS_Store
+.idea/
+.vscode/
